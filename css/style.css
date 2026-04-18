@@ -110,27 +110,22 @@ p { color: rgba(255,255,255,0.85); }
 .nav-links a:hover { opacity: 1; color: var(--gold); }
 .nav-dropdown { position: relative; padding-bottom: 12px; }
 .nav-dropdown-menu {
+  display: none;
   position: absolute;
   top: 100%;
-  padding-top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background: #1A1A1A;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
   min-width: 220px;
   padding: 8px 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: all var(--transition);
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
   z-index: 1001;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu {
-  opacity: 1;
-  pointer-events: all;
+.nav-dropdown-menu.open {
+  display: block;
 }
 .nav-dropdown-menu a {
   display: block;
