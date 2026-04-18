@@ -113,19 +113,28 @@ function initAnimations() {
 initAnimations();
 window.Mostro = { refreshAnimations: initAnimations };
 
-/* --- Nav Dropdown on Mobile --- */
 document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
   toggle.addEventListener('click', e => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      const menu = toggle.nextElementSibling;
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-      menu.style.position = 'static';
+    e.preventDefault();
+    const dropdown = toggle.closest('.nav-dropdown');
+    const menu = dropdown.querySelector('.nav-dropdown-menu');
+    const isVisible = menu.style.opacity === '1';
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => {
+      m.style.opacity = '0';
+      m.style.pointerEvents = 'none';
+    });
+    if (!isVisible) {
       menu.style.opacity = '1';
       menu.style.pointerEvents = 'all';
-      menu.style.boxShadow = 'none';
-      menu.style.border = 'none';
-      menu.style.padding = '0 0 0 1rem';
     }
   });
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.nav-dropdown')) {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => {
+      m.style.opacity = '0';
+      m.style.pointerEvents = 'none';
+    });
+  }
 });
