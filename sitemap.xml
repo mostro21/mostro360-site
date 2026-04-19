@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mostro360.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mostro360.com/pillar-1-protected-ai.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mostro360.com/pillar-2-automation.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mostro360.com/pillar-3-cybersecurity.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mostro360.com/pillar-4-cyber-liability.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mostro360.com/pillar-5-talent-magnet.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mostro360.com/offboarding-shield.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mostro360.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mostro360.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mostro360.com/book-a-call.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mostro360.com/thank-you.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mostro360.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mostro360.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
