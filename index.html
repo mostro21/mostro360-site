@@ -352,35 +352,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question">What is the FTC Safeguards Rule and does it apply to mortgage brokers?</button>
-        <div class="faq-answer"><p>Yes. The FTC Safeguards Rule applies to non-bank financial institutions including mortgage brokers. It requires a written information security program, vendor oversight, employee training, and incident response planning. Violations carry penalties of up to <span class="text-danger">$53,088 per violation</span> for the company and up to $10,000 personally for officers.</p></div>
+        <div class="faq-answer" style="display:none;"><p>Yes. The FTC Safeguards Rule applies to non-bank financial institutions including mortgage brokers. It requires a written information security program, vendor oversight, employee training, and incident response planning. Violations carry penalties of up to <span class="text-danger">$53,088 per violation</span> for the company and up to $10,000 personally for officers.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">What makes MOSTRO 360 different from a regular IT company?</button>
-        <div class="faq-answer"><p>MOSTRO 360 is purpose-built for mortgage brokers with remote workforces. We combine enterprise cybersecurity, protected AI, automation, LOS integration, and cyber liability defense in one platform — priced per company with unlimited users. No generic IT provider offers all five pillars configured for your regulatory environment.</p></div>
+        <div class="faq-answer" style="display:none;"><p>MOSTRO 360 is purpose-built for mortgage brokers with remote workforces. We combine enterprise cybersecurity, protected AI, automation, LOS integration, and cyber liability defense in one platform — priced per company with unlimited users. No generic IT provider offers all five pillars configured for your regulatory environment.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">How does MOSTRO 360 handle my loan officers' personal devices?</button>
-        <div class="faq-answer"><p>Browser-level security wraps every device and every connection — whether your LOs are working from home, a coffee shop, or a client's office. NPI stays protected regardless of what device they're using.</p></div>
+        <div class="faq-answer" style="display:none;"><p>Browser-level security wraps every device and every connection — whether your LOs are working from home, a coffee shop, or a client's office. NPI stays protected regardless of what device they're using.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">What happens when a loan officer leaves my brokerage?</button>
-        <div class="faq-answer"><p>The Offboarding Shield handles every departure cleanly. The LO takes their contacts, their phone number, and their database — all documented and transferred compliantly. You keep the full audit trail, the evidence file, and zero legal exposure.</p></div>
+        <div class="faq-answer" style="display:none;"><p>The Offboarding Shield handles every departure cleanly. The LO takes their contacts, their phone number, and their database — all documented and transferred compliantly. You keep the full audit trail, the evidence file, and zero legal exposure.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Does MOSTRO 360 replace my LOS?</button>
-        <div class="faq-answer"><p>No. We integrate with your existing LOS — Encompass, ARIVE, Byte, or others. We assess your specific setup and build the most efficient integration your system allows.</p></div>
+        <div class="faq-answer" style="display:none;"><p>No. We integrate with your existing LOS — Encompass, ARIVE, Byte, or others. We assess your specific setup and build the most efficient integration your system allows.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">How quickly can MOSTRO 360 be deployed?</button>
-        <div class="faq-answer"><p>Every loan officer is onboarded with their own infrastructure within 48 hours of signing.</p></div>
+        <div class="faq-answer" style="display:none;"><p>Every loan officer is onboarded with their own infrastructure within 48 hours of signing.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">What is Florida FIPA and how does it affect my brokerage?</button>
-        <div class="faq-answer"><p>The Florida Information Protection Act requires businesses to notify affected individuals within 30 days of a data breach. Penalties can reach up to <span class="text-danger">$500,000 per breach</span>. Florida mortgage brokers are subject to both FIPA and FTC Safeguards Rule simultaneously.</p></div>
+        <div class="faq-answer" style="display:none;"><p>The Florida Information Protection Act requires businesses to notify affected individuals within 30 days of a data breach. Penalties can reach up to <span class="text-danger">$500,000 per breach</span>. Florida mortgage brokers are subject to both FIPA and FTC Safeguards Rule simultaneously.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">How many brokerages do you accept per metro area?</button>
-        <div class="faq-answer"><p>Only 5. We build market dominators — and two market dominators in the same metro cancel each other out. Once your metro fills, that door closes permanently.</p></div>
+        <div class="faq-answer" style="display:none;"><p>Only 5. We build market dominators — and two market dominators in the same metro cancel each other out. Once your metro fills, that door closes permanently.</p></div>
       </div>
     </div>
   </div>
@@ -450,5 +450,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="js/main.js"></script>
     <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69d5cd753d6e16923651d1ba"></script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(question) {
+  question.addEventListener('click', function() {
+    var answer = this.nextElementSibling;
+    var icon = this.querySelector('.faq-icon');
+    if (answer.style.display === 'none' || answer.style.display === '') {
+      answer.style.display = 'block';
+      if (icon) icon.textContent = '−';
+    } else {
+      answer.style.display = 'none';
+      if (icon) icon.textContent = '+';
+    }
+  });
+});
+</script>
 </body>
 </html>
