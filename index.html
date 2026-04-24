@@ -20,8 +20,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+:root {
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-heading: 'Rajdhani', sans-serif;
+  --font-body: 'Barlow Condensed', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --color-obsidian: #0A0A0A;
+  --color-white: #FFFFFF;
+  --color-amber: #E87D00;
+  --color-gold: #F5C200;
+  --color-orange: #D44A00;
+  --color-forge: #111318;
+  --color-ghost: #E8EAF0;
+}
+h1, .hero-title { font-family: 'Bebas Neue', sans-serif !important; letter-spacing: 0.03em; }
+h2, .section-title { font-family: 'Bebas Neue', sans-serif !important; letter-spacing: 0.03em; }
+h3, h4 { font-family: 'Rajdhani', sans-serif !important; font-weight: 700; }
+.faq-question { font-family: 'Rajdhani', sans-serif !important; font-size: 1.15rem !important; font-weight: 600; }
+.hero-sub, .section-sub { font-family: 'Barlow Condensed', sans-serif !important; font-size: 1.15rem; }
+.check-item p, .shield-item p, .faq-answer p, td { font-family: 'Barlow Condensed', sans-serif !important; font-size: 1.05rem; }
+.pricing-tagline { font-family: 'Barlow Condensed', sans-serif !important; font-size: 1.15rem; }
+.section-label { font-family: 'Space Mono', monospace !important; font-size: 0.72rem !important; letter-spacing: 0.1em; text-transform: uppercase; }
+.hero-eyebrow { font-family: 'Space Mono', monospace !important; font-size: 0.75rem !important; letter-spacing: 0.09em; }
+.about-creds { font-family: 'Space Mono', monospace !important; font-size: 0.72rem !important; letter-spacing: 0.07em; }
+.about-title { font-family: 'Rajdhani', sans-serif !important; font-size: 1.2rem; }
+.about-motto { font-family: 'Rajdhani', sans-serif !important; font-size: 1.15rem; font-style: italic; }
+.about-content > p { font-family: 'Barlow Condensed', sans-serif !important; font-size: 1.1rem; line-height: 1.7; }
+.wg-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 920px; margin: 0 auto 3.5rem; }
+@media (max-width: 640px) { .wg-grid { grid-template-columns: 1fr; } }
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script type="application/ld+json">
 {
@@ -43,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {"@type": "Question", "name": "What makes MOSTRO 360 different from a regular IT company?", "acceptedAnswer": {"@type": "Answer", "text": "MOSTRO 360 is purpose-built for mortgage brokers with remote workforces. We combine enterprise cybersecurity, protected AI, automation, LOS integration, and cyber liability defense in one platform — priced per company with unlimited users."}},
     {"@type": "Question", "name": "How does MOSTRO 360 handle my loan officers' personal devices?", "acceptedAnswer": {"@type": "Answer", "text": "Browser-level security wraps every device and every connection — whether your LOs are working from home, a coffee shop, or a client's office. NPI stays protected regardless of what device they're using."}},
     {"@type": "Question", "name": "What happens when a loan officer leaves my brokerage?", "acceptedAnswer": {"@type": "Answer", "text": "The Offboarding Shield handles every departure cleanly. The LO takes their contacts, phone number, and database — all documented and transferred compliantly. You keep the full audit trail and zero legal exposure."}},
-    {"@type": "Question", "name": "How many brokerages do you accept per metro area?", "acceptedAnswer": {"@type": "Answer", "text": "Only 5. We build market dominators — and two market dominators in the same metro cancel each other out. Once your metro fills, that door closes permanently."}}
+    {"@type": "Question", "name": "How many brokerages do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "We focus exclusively on Florida — statewide. We work with a selective number of brokerages to ensure every client receives elite-level attention. When capacity fills, the waitlist opens."}}
   ]
 }
 </script>
@@ -61,7 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "description": "The only cybersecurity and FTC Safeguards compliance ecosystem built exclusively for mortgage brokers. We protect your brokerage, your loan officers, and your clients from data breaches, wire fraud, and regulatory penalties — nationwide.",
       "founder": {
         "@type": "Person",
-        "name": "Dennis Patiño",
+        "name": "Dennis Patino",
         "jobTitle": "CEO & Founder"
       },
       "address": {
@@ -188,10 +218,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SCARCITY BAR -->
-<div class="scarcity-bar">
-  <p>⚠ ONLY 5 MORTGAGE BROKERAGES ACCEPTED PER METRO AREA — <a href="book-a-call.html">Check Your Market Availability</a></p>
+<!-- CREDENTIALS BAR -->
+<div style="background:#111318;padding:18px 24px;text-align:center;border-top:1px solid rgba(232,125,0,0.25);border-bottom:1px solid rgba(232,125,0,0.25);">
+  <p style="font-family:'Space Mono',monospace;font-size:0.7rem;color:#E87D00;letter-spacing:0.09em;text-transform:uppercase;margin:0;line-height:2;">STAR &mdash; Official Cybersecurity Partner &nbsp;&middot;&nbsp; FAMP Member &nbsp;&middot;&nbsp; Keiser University Cybersecurity Advisory Board &nbsp;&middot;&nbsp; Tampa Bay Chamber &nbsp;&middot;&nbsp; Hispanic Chamber &nbsp;&middot;&nbsp; CABA &nbsp;&middot;&nbsp; BNI Member</p>
 </div>
+
+<!-- WHITE GLOVE / DONE FOR YOU -->
+<section style="background:#0A0A0A;padding:100px 0;" id="white-glove">
+  <div class="container">
+    <p style="font-family:'Space Mono',monospace;font-size:0.72rem;color:#D44A00;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1.25rem;text-align:center;">WHITE GLOVE SERVICE</p>
+    <h2 style="font-family:'Bebas Neue',sans-serif;color:#FFFFFF;font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1.05;text-align:center;margin:0 0 1.25rem;letter-spacing:0.03em;">YOUR TEAM TOUCHES NOTHING.<br>WE HANDLE EVERYTHING.</h2>
+    <p style="font-family:'Rajdhani',sans-serif;font-size:1.25rem;color:#E87D00;text-align:center;max-width:680px;margin:0 auto 3.5rem;line-height:1.65;">From deployment to monitoring to compliance documentation &mdash; we do the heavy lifting so you never have to.</p>
+
+    <div class="wg-grid">
+
+      <div style="background:#111318;border-radius:12px;padding:2rem 2rem 2rem 1.75rem;border-left:3px solid #E87D00;">
+        <p style="font-family:'Space Mono',monospace;font-size:0.68rem;color:#E87D00;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 0.9rem;">WEEK 1</p>
+        <div style="font-size:1.6rem;color:#E87D00;margin-bottom:0.75rem;"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.3rem;color:#FFFFFF;margin:0 0 0.75rem;font-weight:700;">We Audit. You Do Nothing.</h3>
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;color:#E8EAF0;margin:0;line-height:1.65;">We scan your entire environment &mdash; devices, domains, email infrastructure, vendor access. You get a full risk report.</p>
+      </div>
+
+      <div style="background:#111318;border-radius:12px;padding:2rem 2rem 2rem 1.75rem;border-left:3px solid #E87D00;">
+        <p style="font-family:'Space Mono',monospace;font-size:0.68rem;color:#E87D00;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 0.9rem;">WEEK 2</p>
+        <div style="font-size:1.6rem;color:#E87D00;margin-bottom:0.75rem;"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.3rem;color:#FFFFFF;margin:0 0 0.75rem;font-weight:700;">We Deploy. Your Team Gets One Email.</h3>
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;color:#E8EAF0;margin:0;line-height:1.65;">We configure and install everything. Your LOs receive one onboarding email. That is their entire involvement.</p>
+      </div>
+
+      <div style="background:#111318;border-radius:12px;padding:2rem 2rem 2rem 1.75rem;border-left:3px solid #E87D00;">
+        <p style="font-family:'Space Mono',monospace;font-size:0.68rem;color:#E87D00;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 0.9rem;">WEEK 3</p>
+        <div style="font-size:1.6rem;color:#E87D00;margin-bottom:0.75rem;"><i class="fa-solid fa-circle-check"></i></div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.3rem;color:#FFFFFF;margin:0 0 0.75rem;font-weight:700;">We Test. You See Your Report.</h3>
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;color:#E8EAF0;margin:0;line-height:1.65;">Full penetration test and compliance verification. You receive a clean evidence file &mdash; audit-ready from day one.</p>
+      </div>
+
+      <div style="background:#111318;border-radius:12px;padding:2rem 2rem 2rem 1.75rem;border-left:3px solid #E87D00;">
+        <p style="font-family:'Space Mono',monospace;font-size:0.68rem;color:#E87D00;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 0.9rem;">WEEK 4</p>
+        <div style="font-size:1.6rem;color:#E87D00;margin-bottom:0.75rem;"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.3rem;color:#FFFFFF;margin:0 0 0.75rem;font-weight:700;">You're Protected. We Monitor Forever.</h3>
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;color:#E8EAF0;margin:0;line-height:1.65;">24/7 SOC monitoring, automated alerts, quarterly reviews. We watch everything. You close more loans.</p>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);color:#FFFFFF;letter-spacing:0.04em;margin:0 0 0.4rem;">MOST BROKERS SPEND MONTHS TRYING TO GET THIS RIGHT.</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);color:#E87D00;letter-spacing:0.04em;margin:0 0 2.25rem;">OUR CLIENTS SPEND 30 MINUTES SIGNING THE AGREEMENT.</p>
+      <a href="/book-a-call.html" style="display:inline-block;background:#E87D00;color:#FFFFFF;font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.06em;padding:16px 44px;border-radius:50px;text-decoration:none;text-transform:uppercase;">Book Your Discovery Call &rarr;</a>
+    </div>
+  </div>
+</section>
 
 <!-- WHO THIS IS FOR -->
 <section class="section" id="who">
@@ -408,8 +485,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="faq-answer" style="display:none;"><p>The Florida Information Protection Act requires businesses to notify affected individuals within 30 days of a data breach. Penalties can reach up to <span class="text-danger">$500,000 per breach</span>. Florida mortgage brokers are subject to both FIPA and FTC Safeguards Rule simultaneously.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">How many brokerages do you accept per metro area?</button>
-        <div class="faq-answer" style="display:none;"><p>Only 5. We build market dominators — and two market dominators in the same metro cancel each other out. Once your metro fills, that door closes permanently.</p></div>
+        <button class="faq-question">How many brokerages do you work with?</button>
+        <div class="faq-answer" style="display:none;"><p>We focus exclusively on Florida — statewide. We work with a selective number of brokerages to ensure every client receives elite-level attention. When capacity fills, the waitlist opens.</p></div>
       </div>
     </div>
   </div>
@@ -418,10 +495,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FINAL CTA -->
 <section class="section section-cta">
   <div class="container text-center" style="text-align:center;max-width:800px;margin:0 auto;">
-    <div class="scarcity-badge">LIMITED AVAILABILITY</div>
-    <h2 class="section-title">Only 5 Brokerages Per Metro Area.<br>Is Your Spot Still Available?</h2>
-    <p class="section-sub">There are mortgage brokers in your market right now who will never get this call. Because once your metro fills — that door closes.</p>
-    <a href="book-a-call.html" class="btn btn-primary btn-lg">Book Your Strategy Call with Dennis</a>
+    <h2 class="section-title">YOU'VE ALREADY WON.<br><span style="color:#E87D00;">DON'T LOSE IT.</span></h2>
+    <p class="section-sub" style="font-family:'Rajdhani',sans-serif;color:#E8EAF0;">The brokers ahead of you already made this decision.<br>The only question is whether you make it before or after something goes wrong.</p>
+    <a href="book-a-call.html" class="btn btn-primary btn-lg">Book Your Discovery Call &rarr;</a>
     <p class="disclaimer">Dennis J. Patino, CEO &amp; Founder | FAMP Member | Official Cybersecurity Partner — STAR | Wesley Chapel, FL</p>
   </div>
 </section>
