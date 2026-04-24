@@ -51,6 +51,15 @@ h3, h4 { font-family: 'Rajdhani', sans-serif !important; font-weight: 700; }
 .about-content > p { font-family: 'Barlow Condensed', sans-serif !important; font-size: 1.1rem; line-height: 1.7; }
 .wg-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 920px; margin: 0 auto 3.5rem; }
 @media (max-width: 640px) { .wg-grid { grid-template-columns: 1fr; } }
+.hero-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px !important; text-align: left !important; }
+.hero-two-col .hero-ctas { justify-content: flex-start !important; }
+@keyframes govblink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+.gov-cursor { display:inline-block; width:8px; height:0.85em; background:#E87D00; vertical-align:middle; animation:govblink 1s step-end infinite; margin-left:3px; }
+@media (max-width: 900px) {
+  .hero-two-col { grid-template-columns: 1fr !important; gap: 2rem; }
+  .hero-two-col > div:first-child { text-align: center; }
+  .hero-two-col .hero-ctas { justify-content: center !important; }
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script type="application/ld+json">
@@ -207,13 +216,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- HERO -->
 <section class="hero" style="background:#0A0A0A;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 75% 65% at 50% 42%,rgba(232,125,0,0.17) 0%,rgba(212,74,0,0.06) 50%,transparent 75%);pointer-events:none;"></div>
-  <div class="hero-content" style="position:relative;z-index:1;">
-    <p class="hero-eyebrow" style="font-family:'Space Mono',monospace;font-size:0.75rem;color:#E87D00;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1.5rem;">FLORIDA'S APEX CYBERSECURITY PARTNER</p>
-    <h1 class="hero-title">THE OPERATING SYSTEM<br>FLORIDA'S <span style="color:#E87D00;">TOP BROKERS</span><br>RUN ON.</h1>
-    <p class="hero-sub" style="font-family:'Barlow Condensed',sans-serif;color:#E8EAF0;">MOSTRO 360 isn't for every mortgage broker. It's for the ones who are about to become <strong>the ones who've already won.</strong></p>
-    <div class="hero-ctas">
-      <a href="/book-a-call.html" class="btn btn-primary btn-lg" style="border-radius:50px;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:0.07em;padding:18px 48px;font-size:1.1rem;text-transform:uppercase;">BOOK YOUR DISCOVERY CALL &rarr;</a>
+  <div class="hero-content hero-two-col" style="position:relative;z-index:1;">
+
+    <!-- LEFT: Copy -->
+    <div>
+      <p class="hero-eyebrow" style="font-family:'Space Mono',monospace;font-size:0.75rem;color:#E87D00;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1.5rem;">FLORIDA'S APEX CYBERSECURITY PARTNER</p>
+      <h1 class="hero-title">THE OPERATING SYSTEM<br>FLORIDA'S <span style="color:#E87D00;">TOP BROKERS</span><br>RUN ON.</h1>
+      <p class="hero-sub" style="font-family:'Barlow Condensed',sans-serif;color:#E8EAF0;margin-left:0;margin-right:0;">MOSTRO 360 isn't for every mortgage broker. It's for the ones who are about to become <strong>the ones who've already won.</strong></p>
+      <div class="hero-ctas">
+        <a href="/book-a-call.html" class="btn btn-primary btn-lg" style="border-radius:50px;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:0.07em;padding:18px 48px;font-size:1.1rem;text-transform:uppercase;">BOOK YOUR DISCOVERY CALL &rarr;</a>
+      </div>
     </div>
+
+    <!-- RIGHT: GOVERNOR Terminal -->
+    <div>
+      <div style="background:#111318;border-radius:12px;border-top:2px solid #E87D00;box-shadow:0 0 35px rgba(139,26,0,0.4),0 0 70px rgba(139,26,0,0.14),0 24px 48px rgba(0,0,0,0.6),inset 0 0 0 1px rgba(232,125,0,0.08);overflow:hidden;">
+        <!-- Title bar -->
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-bottom:1px solid rgba(232,125,0,0.15);background:rgba(255,255,255,0.025);">
+          <div style="display:flex;gap:7px;align-items:center;">
+            <span style="width:11px;height:11px;border-radius:50%;background:#FF5F57;display:inline-block;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#FFBD2E;display:inline-block;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#28C840;display:inline-block;"></span>
+          </div>
+          <span style="font-family:'Space Mono',monospace;font-size:0.62rem;color:#E87D00;letter-spacing:0.05em;">GOVERNOR &middot; LIVE FEED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2026-04-23</span>
+          <div style="width:52px;"></div>
+        </div>
+        <!-- Output area -->
+        <div style="padding:18px 20px 14px;min-height:310px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div id="gov-output" style="font-family:'Space Mono',monospace;font-size:0.65rem;line-height:1.95;color:#E8EAF0;flex:1;"></div>
+          <div style="margin-top:10px;font-family:'Space Mono',monospace;font-size:0.65rem;">
+            <span style="color:#E87D00;">$</span><span class="gov-cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -561,6 +598,58 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
     }
   });
 });
+<script>
+// GOVERNOR terminal animation
+(function(){
+  var output = document.getElementById('gov-output');
+  if (!output) return;
+  var domains = ['domain.floridamortgagepro.com','domain.suncoastrealty-mortgage.com'];
+  var di = 0;
+  function getLines(d){
+    return [
+      {t:'> SCAN '+d,                                          c:'#E8EAF0', cd:52, pre:500},
+      {t:'',                                                   c:'',        cd:0,  pre:280},
+      {t:'DMARC: FAIL',                                        c:'#D44A00', cd:78, pre:380},
+      {t:'SPF: SOFTFAIL',                                      c:'#D44A00', cd:78, pre:210},
+      {t:'DKIM: PASS',                                         c:'#E87D00', cd:78, pre:210},
+      {t:'',                                                   c:'',        cd:0,  pre:320},
+      {t:'RISK SCORE: 0.84 · TIER 3 VULNERABILITY',      c:'#D44A00', cd:52, pre:360, b:true},
+      {t:'',                                                   c:'',        cd:0,  pre:480},
+      {t:'● GOVERNOR',                                    c:'#F5C200', cd:72, pre:220, b:true},
+      {t:'  Recommend: upgrade DMARC to p=reject within 72h.',c:'#E8EAF0', cd:30, pre:320},
+      {t:'  Drafting policy remediation plan...',              c:'#E8EAF0', cd:40, pre:720},
+      {t:'  Filing proposed changes for broker approval...',   c:'#E8EAF0', cd:40, pre:940},
+      {t:'',                                                   c:'',        cd:0,  pre:520},
+      {t:'STATUS: AWAITING BROKER SIGN-OFF',                   c:'#E87D00', cd:52, pre:420, b:true}
+    ];
+  }
+  function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
+  async function typeLine(el,text,cd){
+    for(var i=0;i<text.length;i++){
+      el.textContent+=text[i];
+      await sleep(cd+Math.random()*16);
+    }
+  }
+  async function run(){
+    while(true){
+      output.innerHTML='';
+      var ls=getLines(domains[di%domains.length]);
+      di++;
+      for(var i=0;i<ls.length;i++){
+        var l=ls[i];
+        await sleep(l.pre);
+        if(!l.t){output.appendChild(document.createElement('br'));continue;}
+        var el=document.createElement('div');
+        el.style.color=l.c;
+        if(l.b)el.style.fontWeight='bold';
+        output.appendChild(el);
+        await typeLine(el,l.t,l.cd);
+      }
+      await sleep(3200);
+    }
+  }
+  run();
+})();
 </script>
 </body>
 </html>
