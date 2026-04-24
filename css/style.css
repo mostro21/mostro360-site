@@ -26,7 +26,7 @@
 /* --- Reset --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+body { background: var(--bg); color: var(--white); font-family: var(--font-body); font-size: 20px; line-height: 1.7; overflow-x: hidden; }
 img { max-width: 100%; display: block; }
 a { color: var(--gold); text-decoration: none; transition: opacity var(--transition); }
 a:hover { opacity: 0.85; }
@@ -34,10 +34,10 @@ ul { list-style: none; }
 
 /* --- Typography --- */
 h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; }
-h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
-h3 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
-h4 { font-size: 1.1rem; }
+h1 { font-size: clamp(3.25rem, 7vw, 5rem); }
+h2 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+h4 { font-size: 1.25rem; }
 p { color: rgba(255,255,255,0.85); }
 
 /* --- Container --- */
@@ -193,7 +193,7 @@ p { color: rgba(255,255,255,0.85); }
   background: rgba(245,168,0,0.1);
   border: 1px solid rgba(245,168,0,0.3);
   color: var(--gold);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -203,7 +203,7 @@ p { color: rgba(255,255,255,0.85); }
 }
 .hero-title { color: var(--white); margin-bottom: 1.5rem; }
 .hero-title .highlight { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.hero-sub { font-size: 1.2rem; color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto 2.5rem; }
+.hero-sub { font-size: 1.35rem; color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto 2.5rem; }
 .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* --- Scarcity Bar --- */
@@ -227,7 +227,7 @@ p { color: rgba(255,255,255,0.85); }
 .section-label {
   display: inline-block;
   color: var(--gold);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -236,7 +236,7 @@ p { color: rgba(255,255,255,0.85); }
   padding-bottom: 4px;
 }
 .section-title { color: var(--white); margin-bottom: 1.5rem; }
-.section-sub { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 700px; margin-bottom: 3rem; }
+.section-sub { font-size: 1.625rem; line-height: 1.65; color: rgba(255,255,255,0.7); max-width: 700px; margin-bottom: 3rem; }
 .text-center { text-align: center; }
 .text-danger { color: var(--red); font-weight: 600; }
 
@@ -244,6 +244,7 @@ p { color: rgba(255,255,255,0.85); }
 .checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
 .check-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem; background: var(--bg-card); border-radius: var(--radius); border-left: 3px solid var(--gold); }
 .check-icon { color: var(--gold); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.check-item p { font-size: 1.25rem; line-height: 1.8; }
 
 /* --- Comparison Table --- */
 .table-wrap { overflow-x: auto; margin-top: 2rem; border-radius: var(--radius); border: 1px solid var(--border); }
@@ -259,10 +260,11 @@ p { color: rgba(255,255,255,0.85); }
   text-align: left;
   border-bottom: 2px solid var(--border);
 }
-.compare-table td, .pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+.compare-table td, .pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); color: rgba(255,255,255,0.8); font-size: 1.25rem; }
 .compare-table tr:last-child td, .pricing-table tr:last-child td { border-bottom: none; }
 .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
 .col-highlight { background: rgba(245,168,0,0.06) !important; color: var(--gold) !important; font-weight: 500; }
+.pricing-table .col-highlight { font-size: 1rem; }
 .compare-table th.col-highlight { background: rgba(245,168,0,0.15) !important; color: var(--gold) !important; }
 
 /* --- Pillars Grid --- */
@@ -288,12 +290,13 @@ p { color: rgba(255,255,255,0.85); }
 .pillar-card:hover { border-color: rgba(245,168,0,0.3); transform: translateY(-4px); }
 .pillar-card:hover::before { opacity: 1; }
 .pillar-number { font-family: var(--font-head); font-size: 3rem; font-weight: 800; color: rgba(245,168,0,0.15); line-height: 1; margin-bottom: 0.5rem; }
-.pillar-card h3 { color: var(--white); margin-bottom: 1rem; font-size: 1.4rem; }
-.pillar-card p { margin-bottom: 1.5rem; font-size: 0.95rem; }
+.pillar-card h3 { color: var(--white); margin-bottom: 1rem; font-size: 1.5rem; }
+.pillar-card p { margin-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.7; }
 
 /* --- Shield Grid --- */
 .shield-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 2rem; }
 .shield-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background: rgba(245,168,0,0.05); border-radius: var(--radius); border: 1px solid rgba(245,168,0,0.15); }
+.shield-item p { font-size: 1.25rem; line-height: 1.8; }
 
 /* --- Pricing Compare --- */
 .pricing-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
@@ -303,7 +306,7 @@ p { color: rgba(255,255,255,0.85); }
 .pricing-compare-item.bad h4 { color: var(--red); }
 .pricing-compare-item.good { background: rgba(245,168,0,0.08); border: 1px solid rgba(245,168,0,0.2); }
 .pricing-compare-item.good h4 { color: var(--gold); }
-.pricing-tagline { text-align: center; font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-top: 1.5rem; }
+.pricing-tagline { text-align: center; font-size: 1.25rem; color: rgba(255,255,255,0.7); margin-top: 1.5rem; }
 
 /* --- About Teaser --- */
 .about-teaser { display: grid; grid-template-columns: 300px 1fr; gap: 4rem; align-items: center; }
@@ -322,10 +325,10 @@ p { color: rgba(255,255,255,0.85); }
   border: none;
   color: var(--white);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: left;
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -340,7 +343,7 @@ p { color: rgba(255,255,255,0.85); }
   transition: grid-template-rows 0.35s ease;
 }
 .faq-item.open .faq-answer { grid-template-rows: 1fr; }
-.faq-answer p { overflow: hidden; padding-bottom: 1.25rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
+.faq-answer p { overflow: hidden; padding-bottom: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.7; font-size: 1.2rem; }
 
 /* --- Scarcity Badge --- */
 .scarcity-badge {
@@ -422,7 +425,7 @@ p { color: rgba(255,255,255,0.85); }
   .hamburger { display: flex; }
   .hero { padding: 120px 24px 60px; }
   .hero-ctas { flex-direction: column; align-items: center; }
-  .section { padding: 60px 24px; }
+  .section { padding: 80px 24px; }
   .pricing-compare { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .pillars-grid { grid-template-columns: 1fr; }
