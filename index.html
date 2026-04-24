@@ -221,10 +221,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- LEFT: Copy -->
     <div>
       <p class="hero-eyebrow" style="font-family:'Space Mono',monospace;font-size:0.75rem;color:#E87D00;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1.5rem;">FLORIDA'S APEX CYBERSECURITY PARTNER</p>
-      <h1 class="hero-title">THE OPERATING SYSTEM<br>FLORIDA'S <span style="color:#E87D00;">TOP BROKERS</span><br>RUN ON.</h1>
+      <h1 class="hero-title" style="font-size:clamp(1.9rem,4vw,3.6rem);line-height:1.08;margin-bottom:1.5rem;">
+        <span style="display:block;color:#FFFFFF;">THE OPERATING SYSTEM</span>
+        <span style="display:block;white-space:nowrap;">FLORIDA'S <span style="color:#E87D00;">TOP BROKERS</span></span>
+        <span style="display:block;color:#FFFFFF;">RUN ON.</span>
+      </h1>
       <p class="hero-sub" style="font-family:'Barlow Condensed',sans-serif;color:#E8EAF0;margin-left:0;margin-right:0;">MOSTRO 360 isn't for every mortgage broker. It's for the ones who are about to become <strong>the ones who've already won.</strong></p>
       <div class="hero-ctas">
-        <a href="/book-a-call.html" class="btn btn-primary btn-lg" style="border-radius:50px;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:0.07em;padding:18px 48px;font-size:1.1rem;text-transform:uppercase;">BOOK YOUR DISCOVERY CALL &rarr;</a>
+        <a href="/book-a-call.html" class="btn btn-primary btn-lg" style="border-radius:50px;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:0.07em;padding:18px 48px;font-size:1.1rem;text-transform:uppercase;background:linear-gradient(135deg,#F5C200,#E87D00);color:#000;border:none;">BOOK YOUR DISCOVERY CALL &rarr;</a>
       </div>
     </div>
 
@@ -632,6 +636,7 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
     }
   });
 });
+</script>
 <script>
 // GOVERNOR terminal animation
 (function(){
@@ -641,20 +646,20 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
   var di = 0;
   function getLines(d){
     return [
-      {t:'> SCAN '+d,                                          c:'#E8EAF0', cd:52, pre:500},
-      {t:'',                                                   c:'',        cd:0,  pre:280},
-      {t:'DMARC: FAIL',                                        c:'#D44A00', cd:78, pre:380},
-      {t:'SPF: SOFTFAIL',                                      c:'#D44A00', cd:78, pre:210},
-      {t:'DKIM: PASS',                                         c:'#E87D00', cd:78, pre:210},
-      {t:'',                                                   c:'',        cd:0,  pre:320},
-      {t:'RISK SCORE: 0.84 · TIER 3 VULNERABILITY',      c:'#D44A00', cd:52, pre:360, b:true},
-      {t:'',                                                   c:'',        cd:0,  pre:480},
-      {t:'● GOVERNOR',                                    c:'#F5C200', cd:72, pre:220, b:true},
-      {t:'  Recommend: upgrade DMARC to p=reject within 72h.',c:'#E8EAF0', cd:30, pre:320},
-      {t:'  Drafting policy remediation plan...',              c:'#E8EAF0', cd:40, pre:720},
-      {t:'  Filing proposed changes for broker approval...',   c:'#E8EAF0', cd:40, pre:940},
-      {t:'',                                                   c:'',        cd:0,  pre:520},
-      {t:'STATUS: AWAITING BROKER SIGN-OFF',                   c:'#E87D00', cd:52, pre:420, b:true}
+      {t:'> SCAN '+d,                                          c:'#E8EAF0', cd:50, pre:0},
+      {t:'',                                                   c:'',        cd:0,  pre:200},
+      {t:'DMARC: FAIL',                                        c:'#D44A00', cd:50, pre:300},
+      {t:'SPF: SOFTFAIL',                                      c:'#D44A00', cd:50, pre:150},
+      {t:'DKIM: PASS',                                         c:'#E87D00', cd:50, pre:150},
+      {t:'',                                                   c:'',        cd:0,  pre:250},
+      {t:'RISK SCORE: 0.84 · TIER 3 VULNERABILITY',           c:'#D44A00', cd:50, pre:300, b:true},
+      {t:'',                                                   c:'',        cd:0,  pre:400},
+      {t:'● GOVERNOR',                                         c:'#F5C200', cd:50, pre:200, b:true},
+      {t:'  Recommend: upgrade DMARC to p=reject within 72h.',c:'#E8EAF0', cd:50, pre:250},
+      {t:'  Drafting policy remediation plan...',              c:'#E8EAF0', cd:50, pre:600},
+      {t:'  Filing proposed changes for broker approval...',   c:'#E8EAF0', cd:50, pre:800},
+      {t:'',                                                   c:'',        cd:0,  pre:400},
+      {t:'STATUS: AWAITING BROKER SIGN-OFF',                   c:'#E87D00', cd:50, pre:350, b:true}
     ];
   }
   function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
