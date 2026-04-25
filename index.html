@@ -242,7 +242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span style="width:11px;height:11px;border-radius:50%;background:#FFBD2E;display:inline-block;"></span>
             <span style="width:11px;height:11px;border-radius:50%;background:#28C840;display:inline-block;"></span>
           </div>
-          <span style="font-family:'Space Mono',monospace;font-size:15px;color:#E87D00;letter-spacing:0.05em;">GOVERNOR &middot; LIVE FEED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2026-04-23</span>
+          <span style="font-family:'Space Mono',monospace;font-size:15px;color:#E87D00;letter-spacing:0.05em;">MOSTRO 360 &middot; PLATFORM FEED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2026-04-24</span>
           <div style="width:52px;"></div>
         </div>
         <!-- Output area -->
@@ -253,6 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
+      <p style="font-family:'Space Mono',monospace;font-size:0.6rem;color:#666666;line-height:1.7;margin:0.85rem 0 0;text-align:center;">Scenario-based modeling only. No personal borrower data is ever uploaded to AI systems. FTC Safeguards compliant by design.</p>
     </div>
 
   </div>
@@ -808,56 +809,111 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
 });
 </script>
 <script>
-// GOVERNOR terminal animation
+// MOSTRO 360 Platform Feed terminal animation
 (function(){
   var output = document.getElementById('gov-output');
   if (!output) return;
-  var domains = ['domain.floridamortgagepro.com','domain.suncoastrealty-mortgage.com'];
-  var di = 0;
-  function getLines(d){
-    return [
-      {t:'> SCAN '+d,                                          c:'#E8EAF0', cd:50, pre:0},
-      {t:'',                                                   c:'',        cd:0,  pre:200},
-      {t:'DMARC: FAIL',                                        c:'#D44A00', cd:50, pre:300, b:true, fs:'17px'},
-      {t:'SPF: SOFTFAIL',                                      c:'#D44A00', cd:50, pre:150, b:true, fs:'17px'},
-      {t:'DKIM: PASS',                                         c:'#E87D00', cd:50, pre:150, b:true, fs:'17px'},
-      {t:'',                                                   c:'',        cd:0,  pre:250},
-      {t:'RISK SCORE: 0.84 · TIER 3 VULNERABILITY',           c:'#D44A00', cd:50, pre:300, b:true},
-      {t:'',                                                   c:'',        cd:0,  pre:400},
-      {t:'● GOVERNOR',                                         c:'#F5C200', cd:50, pre:200, b:true},
-      {t:'  Recommend: upgrade DMARC to p=reject within 72h.',c:'#E8EAF0', cd:50, pre:250, fs:'15px'},
-      {t:'  Drafting policy remediation plan...',              c:'#E8EAF0', cd:50, pre:600, fs:'15px'},
-      {t:'  Filing proposed changes for broker approval...',   c:'#E8EAF0', cd:50, pre:800, fs:'15px'},
-      {t:'',                                                   c:'',        cd:0,  pre:400},
-      {t:'STATUS: AWAITING BROKER SIGN-OFF',                   c:'#E87D00', cd:50, pre:350, b:true}
-    ];
-  }
-  function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
-  async function typeLine(el,text,cd){
-    for(var i=0;i<text.length;i++){
-      el.textContent+=text[i];
-      await sleep(cd+Math.random()*16);
+
+  var HDR = {t:'MOSTRO 360 · PLATFORM FEED          2026-04-24', c:'#E87D00', cd:10, pre:0};
+
+  var scenarios = [
+    // Scenario 1 — After Hours Lead
+    [
+      HDR,
+      {t:'', cd:0, pre:180},
+      {t:'> MONITORING: Florida Brokerage · 11:47 PM',   c:'#FFFFFF', cd:12, pre:0},
+      {t:'', cd:0, pre:220},
+      {t:'● AI VOICE AGENT: Inbound inquiry received',   c:'#E87D00', cd:12, pre:0,   b:true},
+      {t:'  Purchase intent · Estimated $520,000',       c:'#F5C200', cd:12, pre:80,  b:true},
+      {t:'  Qualification: Completed automatically',          c:'#FFFFFF', cd:12, pre:80},
+      {t:'  Appointment: Booked · 9:00 AM tomorrow',     c:'#FFFFFF', cd:12, pre:80},
+      {t:'', cd:0, pre:200},
+      {t:'  Your LO was asleep.',                             c:'#FFFFFF', cd:15, pre:120},
+      {t:'  Your competition missed this call.',              c:'#D44A00', cd:15, pre:120},
+      {t:'  MOSTRO 360 didn’t.',                         c:'#E87D00', cd:15, pre:150, b:true},
+      {t:'', cd:0, pre:300},
+      {t:'STATUS: PIPELINE +$520,000',                        c:'#F5C200', cd:18, pre:0,   b:true},
+    ],
+    // Scenario 2 — Top LO Acquisition
+    [
+      HDR,
+      {t:'', cd:0, pre:180},
+      {t:'> MONITORING: Florida Brokerage · 8:23 AM',    c:'#FFFFFF', cd:12, pre:0},
+      {t:'', cd:0, pre:220},
+      {t:'● TOP PRODUCER INQUIRY RECEIVED',              c:'#E87D00', cd:12, pre:0,   b:true},
+      {t:'  $8.2M closed last quarter',                       c:'#F5C200', cd:12, pre:80,  b:true},
+      {t:'  Left previous broker: No AI tools.',              c:'#FFFFFF', cd:12, pre:80},
+      {t:'  No automation. No support.',                      c:'#FFFFFF', cd:12, pre:80},
+      {t:'', cd:0, pre:180},
+      {t:'  Offered through MOSTRO 360:',                     c:'#FFFFFF', cd:12, pre:0},
+      {t:'  ✓ AI platform · 65+ models',            c:'#E87D00', cd:10, pre:80},
+      {t:'  ✓ Personal business line · forever',    c:'#E87D00', cd:10, pre:80},
+      {t:'  ✓ Full automation suite',                    c:'#E87D00', cd:10, pre:80},
+      {t:'  ✓ Enterprise security + compliance',         c:'#E87D00', cd:10, pre:80},
+      {t:'  ✓ Clean exit rights — always',          c:'#E87D00', cd:10, pre:80},
+      {t:'', cd:0, pre:200},
+      {t:'● Signed same day.',                           c:'#E87D00', cd:15, pre:0,   b:true},
+      {t:'  Onboarded in 48 hours.',                          c:'#FFFFFF', cd:12, pre:80},
+      {t:'  Closing deals by day 3.',                         c:'#FFFFFF', cd:12, pre:80},
+      {t:'', cd:0, pre:300},
+      {t:'STATUS: TOP PRODUCER ACQUIRED',                     c:'#F5C200', cd:18, pre:0,   b:true},
+    ],
+    // Scenario 3 — Deal Rescue
+    [
+      HDR,
+      {t:'', cd:0, pre:180},
+      {t:'> MONITORING: Florida Brokerage · 3:42 PM',    c:'#FFFFFF', cd:12, pre:0},
+      {t:'', cd:0, pre:220},
+      {t:'● DEAL STRUCTURE ALERT',                       c:'#D44A00', cd:12, pre:0,   b:true},
+      {t:'  Credit score shift detected · -22 pts',      c:'#FFFFFF', cd:12, pre:80},
+      {t:'  DTI now exceeds conventional guidelines',         c:'#FFFFFF', cd:12, pre:80},
+      {t:'', cd:0, pre:150},
+      {t:'  No PII uploaded. Scenario-based only.',           c:'#FFFFFF', cd:12, pre:0},
+      {t:'', cd:0, pre:200},
+      {t:'● AI AGENT: Running alternative structures',   c:'#E87D00', cd:12, pre:0,   b:true},
+      {t:'', cd:0, pre:150},
+      {t:'  FHA program scenario: Qualifies ✓',          c:'#E87D00', cd:10, pre:0},
+      {t:'  Rate buydown model: Built ✓',                c:'#E87D00', cd:10, pre:80},
+      {t:'  Co-borrower scenario: Analyzed ✓',           c:'#E87D00', cd:10, pre:80},
+      {t:'  LO talking points: Ready ✓',                 c:'#E87D00', cd:10, pre:80},
+      {t:'', cd:0, pre:200},
+      {t:'  LO receives solution before borrower calls.',     c:'#FFFFFF', cd:12, pre:0},
+      {t:'', cd:0, pre:300},
+      {t:'STATUS: DEAL SAVED',                                c:'#F5C200', cd:18, pre:0,   b:true},
+    ]
+  ];
+
+  var si = 0;
+
+  function sleep(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+
+  async function typeLine(el, text, cd) {
+    for (var i = 0; i < text.length; i++) {
+      el.textContent += text[i];
+      await sleep(cd + Math.random() * 10);
     }
   }
-  async function run(){
-    while(true){
-      output.innerHTML='';
-      var ls=getLines(domains[di%domains.length]);
-      di++;
-      for(var i=0;i<ls.length;i++){
-        var l=ls[i];
+
+  async function run() {
+    while (true) {
+      output.innerHTML = '';
+      var ls = scenarios[si % scenarios.length];
+      si++;
+      for (var i = 0; i < ls.length; i++) {
+        var l = ls[i];
         await sleep(l.pre);
-        if(!l.t){output.appendChild(document.createElement('br'));continue;}
-        var el=document.createElement('div');
-        el.style.color=l.c;
-        if(l.b)el.style.fontWeight='bold';
-        if(l.fs)el.style.fontSize=l.fs;
+        if (!l.t) { output.appendChild(document.createElement('br')); continue; }
+        var el = document.createElement('div');
+        el.style.color = l.c;
+        if (l.b) el.style.fontWeight = 'bold';
+        if (l.fs) el.style.fontSize = l.fs;
         output.appendChild(el);
-        await typeLine(el,l.t,l.cd);
+        await typeLine(el, l.t, l.cd);
       }
-      await sleep(3200);
+      await sleep(4000);
     }
   }
+
   run();
 })();
 </script>
