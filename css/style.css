@@ -662,3 +662,100 @@ p { color: #FFFFFF; }
   width: 100%; height: 100%;
   border: none;
 }
+
+/* ── AI Platform Two-Column ── */
+.ai-platform-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.ai-platform-visual { display: flex; justify-content: flex-end; }
+.ai-platform-img-wrap { width: 100%; max-width: 480px; }
+.ai-platform-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--color-amber, #E87D00);
+  box-shadow: 0 0 48px rgba(232,125,0,0.15);
+}
+.ai-platform-caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold, #F5C200);
+  text-align: center;
+  margin-top: 12px;
+}
+@media (max-width: 768px) {
+  .ai-platform-cols { grid-template-columns: 1fr; gap: 32px; }
+  .ai-platform-visual { justify-content: center; }
+  .ai-platform-img-wrap { max-width: 100%; }
+}
+
+/* ── About / Founder Block ── */
+.about-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-amber, #E87D00);
+  margin-bottom: 16px;
+}
+.about-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.about-headline-gold { color: var(--color-gold, #F5C200); }
+.about-body { max-width: 640px; }
+.about-body p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 400;
+  color: var(--color-ghost, #E8EAF0);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.about-link {
+  display: inline-block;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-amber, #E87D00);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-amber, #E87D00);
+  padding-bottom: 2px;
+  margin-top: 4px;
+  margin-bottom: 40px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.about-link:hover {
+  color: var(--color-gold, #F5C200);
+  border-color: var(--color-gold, #F5C200);
+}
+.about-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(232,234,240,0.5);
+  border-top: 1px solid #1A0800;
+  padding-top: 20px;
+  max-width: 640px;
+}
+.about-cred-dot {
+  color: var(--color-amber, #E87D00);
+  font-size: 0.7rem;
+}
