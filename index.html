@@ -234,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- RIGHT: GOVERNOR Terminal -->
     <div>
-      <div style="background:#111318;border-radius:12px;border-top:2px solid #E87D00;box-shadow:0 0 35px rgba(139,26,0,0.4),0 0 70px rgba(139,26,0,0.14),0 24px 48px rgba(0,0,0,0.6),inset 0 0 0 1px rgba(232,125,0,0.08);overflow:hidden;">
+      <div style="background:#111318;border-radius:12px;border-top:2px solid #E87D00;box-shadow:0 0 55px rgba(232,125,0,0.55),0 0 100px rgba(232,125,0,0.2),0 0 18px rgba(232,125,0,0.25),0 24px 48px rgba(0,0,0,0.7),inset 0 0 0 1px rgba(232,125,0,0.18);overflow:hidden;">
         <!-- Title bar -->
         <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-bottom:1px solid rgba(232,125,0,0.15);background:rgba(255,255,255,0.025);">
           <div style="display:flex;gap:7px;align-items:center;">
@@ -242,13 +242,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span style="width:11px;height:11px;border-radius:50%;background:#FFBD2E;display:inline-block;"></span>
             <span style="width:11px;height:11px;border-radius:50%;background:#28C840;display:inline-block;"></span>
           </div>
-          <span style="font-family:'Space Mono',monospace;font-size:0.62rem;color:#E87D00;letter-spacing:0.05em;">GOVERNOR &middot; LIVE FEED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2026-04-23</span>
+          <span style="font-family:'Space Mono',monospace;font-size:15px;color:#E87D00;letter-spacing:0.05em;">GOVERNOR &middot; LIVE FEED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2026-04-23</span>
           <div style="width:52px;"></div>
         </div>
         <!-- Output area -->
-        <div style="padding:18px 20px 14px;min-height:310px;display:flex;flex-direction:column;justify-content:space-between;">
-          <div id="gov-output" style="font-family:'Space Mono',monospace;font-size:0.65rem;line-height:1.95;color:#FFFFFF;flex:1;"></div>
-          <div style="margin-top:10px;font-family:'Space Mono',monospace;font-size:0.65rem;">
+        <div style="padding:24px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div id="gov-output" style="font-family:'Space Mono',monospace;font-size:16px;line-height:1.8;color:#FFFFFF;flex:1;"></div>
+          <div style="margin-top:10px;font-family:'Space Mono',monospace;font-size:15px;">
             <span style="color:#E87D00;">$</span><span class="gov-cursor"></span>
           </div>
         </div>
@@ -678,16 +678,16 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
     return [
       {t:'> SCAN '+d,                                          c:'#E8EAF0', cd:50, pre:0},
       {t:'',                                                   c:'',        cd:0,  pre:200},
-      {t:'DMARC: FAIL',                                        c:'#D44A00', cd:50, pre:300},
-      {t:'SPF: SOFTFAIL',                                      c:'#D44A00', cd:50, pre:150},
-      {t:'DKIM: PASS',                                         c:'#E87D00', cd:50, pre:150},
+      {t:'DMARC: FAIL',                                        c:'#D44A00', cd:50, pre:300, b:true, fs:'17px'},
+      {t:'SPF: SOFTFAIL',                                      c:'#D44A00', cd:50, pre:150, b:true, fs:'17px'},
+      {t:'DKIM: PASS',                                         c:'#E87D00', cd:50, pre:150, b:true, fs:'17px'},
       {t:'',                                                   c:'',        cd:0,  pre:250},
       {t:'RISK SCORE: 0.84 · TIER 3 VULNERABILITY',           c:'#D44A00', cd:50, pre:300, b:true},
       {t:'',                                                   c:'',        cd:0,  pre:400},
       {t:'● GOVERNOR',                                         c:'#F5C200', cd:50, pre:200, b:true},
-      {t:'  Recommend: upgrade DMARC to p=reject within 72h.',c:'#E8EAF0', cd:50, pre:250},
-      {t:'  Drafting policy remediation plan...',              c:'#E8EAF0', cd:50, pre:600},
-      {t:'  Filing proposed changes for broker approval...',   c:'#E8EAF0', cd:50, pre:800},
+      {t:'  Recommend: upgrade DMARC to p=reject within 72h.',c:'#E8EAF0', cd:50, pre:250, fs:'15px'},
+      {t:'  Drafting policy remediation plan...',              c:'#E8EAF0', cd:50, pre:600, fs:'15px'},
+      {t:'  Filing proposed changes for broker approval...',   c:'#E8EAF0', cd:50, pre:800, fs:'15px'},
       {t:'',                                                   c:'',        cd:0,  pre:400},
       {t:'STATUS: AWAITING BROKER SIGN-OFF',                   c:'#E87D00', cd:50, pre:350, b:true}
     ];
@@ -711,6 +711,7 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
         var el=document.createElement('div');
         el.style.color=l.c;
         if(l.b)el.style.fontWeight='bold';
+        if(l.fs)el.style.fontSize=l.fs;
         output.appendChild(el);
         await typeLine(el,l.t,l.cd);
       }

@@ -162,7 +162,7 @@ p { color: #FFFFFF; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 120px 24px 80px;
+  padding: 80px 24px 80px;
   background: var(--bg);
   position: relative;
   overflow: hidden;
@@ -423,7 +423,7 @@ p { color: #FFFFFF; }
   }
   .nav-links.open .nav-cta { display: inline-block; }
   .hamburger { display: flex; }
-  .hero { padding: 120px 24px 60px; }
+  .hero { padding: 80px 24px 60px; }
   .hero-ctas { flex-direction: column; align-items: center; }
   .section { padding: 80px 24px; }
   .pricing-compare { grid-template-columns: 1fr; }
