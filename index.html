@@ -60,6 +60,8 @@ h3, h4 { font-family: 'Rajdhani', sans-serif !important; font-weight: 700; }
   .hero-two-col > div:first-child { text-align: center; }
   .hero-two-col .hero-ctas { justify-content: center !important; }
 }
+.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+@media (max-width: 768px) { .pain-grid { grid-template-columns: 1fr !important; } }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script type="application/ld+json">
@@ -291,19 +293,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- WHO THIS IS FOR -->
-<section class="section" id="who">
+<!-- SECTION 3: PAIN DIAGNOSIS BLOCK -->
+<section style="background:#0A0A0A;padding:100px 0;" id="pain-diagnosis">
   <div class="container">
-    <div class="section-label">Who This Is For</div>
-    <h2 class="section-title">Built for One Specific Type of Broker</h2>
-    <img src="Images/specific-broker.png" alt="Built for one specific type of mortgage broker" style="width:100%;border-radius:8px;margin-bottom:2rem;display:block;max-height:400px;object-fit:cover;">
-    <div class="checklist">
-      <div class="check-item"><span class="check-icon">✓</span><p>You have 20+ LOs and you're serious about scaling</p></div>
-      <div class="check-item"><span class="check-icon">✓</span><p>You're losing good LOs to competitors with better infrastructure</p></div>
-      <div class="check-item"><span class="check-icon">✓</span><p>You're worried about FTC exposure but don't know where to start</p></div>
-      <div class="check-item"><span class="check-icon">✓</span><p>You want to recruit elite talent without bidding wars on splits</p></div>
-      <div class="check-item"><span class="check-icon">✓</span><p>You're done running 10 fragmented tools that don't talk to each other</p></div>
-      <div class="check-item"><span class="check-icon">✓</span><p>You need a documented cyber liability defense file before a regulator walks in</p></div>
+    <p style="font-family:'Space Mono',monospace;font-size:0.8rem;color:#D44A00;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1.5rem;">BEFORE YOU SCROLL ANY FURTHER</p>
+    <h2 style="font-family:'Bebas Neue',sans-serif;color:#FFFFFF;font-size:clamp(2.5rem,5.5vw,4.2rem);line-height:1.05;margin:0 0 3rem;letter-spacing:0.02em;">HOW MANY OF THESE ARE TRUE IN YOUR<br>BROKERAGE RIGHT NOW?</h2>
+
+    <div class="pain-grid" style="margin:0 0 3rem;">
+
+      <div style="background:#111318;border-left:4px solid #D44A00;border-radius:0 8px 8px 0;padding:32px;">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:19px;color:#FFFFFF;line-height:1.8;margin:0;"><span style="color:#E87D00;font-weight:bold;">&rarr;</span> How many of your loan officers have a personal ChatGPT tab open right now with a borrower's name and SSN in it? If you don't know &mdash; you already have your answer.</p>
+      </div>
+
+      <div style="background:#111318;border-left:4px solid #D44A00;border-radius:0 8px 8px 0;padding:32px;">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:19px;color:#FFFFFF;line-height:1.8;margin:0;"><span style="color:#E87D00;font-weight:bold;">&rarr;</span> When was the last time you watched a top producer walk out the door with your database, your contacts, and zero documentation? Could you prove what they took if a regulator asked tomorrow?</p>
+      </div>
+
+      <div style="background:#111318;border-left:4px solid #D44A00;border-radius:0 8px 8px 0;padding:32px;">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:19px;color:#FFFFFF;line-height:1.8;margin:0;"><span style="color:#E87D00;font-weight:bold;">&rarr;</span> Your loan officers are using their personal phones, personal laptops, personal email, and personal AI tools to handle non-public personal information. Whose name is on the FTC violation when it leaks?</p>
+      </div>
+
+      <div style="background:#111318;border-left:4px solid #D44A00;border-radius:0 8px 8px 0;padding:32px;">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:19px;color:#FFFFFF;line-height:1.8;margin:0;"><span style="color:#E87D00;font-weight:bold;">&rarr;</span> When a borrower's wire instructions get intercepted and $400K disappears, the lawsuit doesn't go to the hacker. It goes to the firm that didn't have controls in place. Do yours hold up?</p>
+      </div>
+
+      <div style="background:#111318;border-left:4px solid #D44A00;border-radius:0 8px 8px 0;padding:32px;">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:19px;color:#FFFFFF;line-height:1.8;margin:0;"><span style="color:#E87D00;font-weight:bold;">&rarr;</span> How many tools are your loan officers juggling right now &mdash; CRM, LOS, dialer, email, marketing automation, e-sign, AI? Which vendor has access to your borrower data, and when did you last audit that?</p>
+      </div>
+
+      <div style="background:#111318;border-left:4px solid #D44A00;border-radius:0 8px 8px 0;padding:32px;">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:19px;color:#FFFFFF;line-height:1.8;margin:0;"><span style="color:#E87D00;font-weight:bold;">&rarr;</span> If your top loan officer got a call tomorrow from a brokerage offering 5 bps more, the only thing keeping them is the infrastructure you've built. What infrastructure?</p>
+      </div>
+
+    </div>
+
+    <!-- CTA block below cards -->
+    <div style="background:#1A0800;border:1px solid #E87D00;border-radius:8px;padding:40px;text-align:center;">
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:22px;color:#FFFFFF;line-height:1.7;margin:0 0 2rem;">If three or more of these landed &mdash;<br>we should talk.</p>
+      <a href="/book-a-call.html" style="display:inline-block;background:linear-gradient(135deg,#F5C200,#E87D00);color:#000;font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:0.07em;padding:18px 48px;border-radius:50px;text-decoration:none;text-transform:uppercase;border:none;">BOOK YOUR DISCOVERY CALL &rarr;</a>
     </div>
   </div>
 </section>
