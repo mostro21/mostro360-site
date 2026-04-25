@@ -242,12 +242,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span style="width:11px;height:11px;border-radius:50%;background:#FFBD2E;display:inline-block;"></span>
             <span style="width:11px;height:11px;border-radius:50%;background:#28C840;display:inline-block;"></span>
           </div>
-          <span style="font-family:'Space Mono',monospace;font-size:15px;color:#E87D00;letter-spacing:0.05em;">MOSTRO 360 &middot; PLATFORM FEED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2026-04-24</span>
+          <span style="font-family:'Space Mono',monospace;font-size:12px;color:#E87D00;letter-spacing:0.05em;white-space:nowrap;">MOSTRO 360 &middot; PLATFORM FEED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2026-04-24</span>
           <div style="width:52px;"></div>
         </div>
         <!-- Output area -->
         <div style="padding:24px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;">
-          <div id="gov-output" style="font-family:'Space Mono',monospace;font-size:16px;line-height:1.8;color:#FFFFFF;flex:1;"></div>
+          <div id="gov-output" style="font-family:'Space Mono',monospace;font-size:13px;line-height:1.8;color:#FFFFFF;flex:1;overflow:hidden;"></div>
           <div style="margin-top:10px;font-family:'Space Mono',monospace;font-size:15px;">
             <span style="color:#E87D00;">$</span><span class="gov-cursor"></span>
           </div>
@@ -814,12 +814,9 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
   var output = document.getElementById('gov-output');
   if (!output) return;
 
-  var HDR = {t:'MOSTRO 360 · PLATFORM FEED          2026-04-24', c:'#E87D00', cd:10, pre:0};
-
   var scenarios = [
     // Scenario 1 — After Hours Lead
     [
-      HDR,
       {t:'', cd:0, pre:180},
       {t:'> MONITORING: Florida Brokerage · 11:47 PM',   c:'#FFFFFF', cd:12, pre:0},
       {t:'', cd:0, pre:220},
@@ -836,7 +833,6 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
     ],
     // Scenario 2 — Top LO Acquisition
     [
-      HDR,
       {t:'', cd:0, pre:180},
       {t:'> MONITORING: Florida Brokerage · 8:23 AM',    c:'#FFFFFF', cd:12, pre:0},
       {t:'', cd:0, pre:220},
@@ -860,7 +856,6 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
     ],
     // Scenario 3 — Deal Rescue
     [
-      HDR,
       {t:'', cd:0, pre:180},
       {t:'> MONITORING: Florida Brokerage · 3:42 PM',    c:'#FFFFFF', cd:12, pre:0},
       {t:'', cd:0, pre:220},
