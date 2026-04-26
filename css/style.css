@@ -804,7 +804,7 @@ p { color: #FFFFFF; }
   text-transform: uppercase;
 }
 .reviews-grid {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-bottom: 40px;
@@ -990,9 +990,11 @@ p { color: #FFFFFF; }
   position: relative;
   overflow: hidden;
   margin-bottom: 40px;
+  width: 100%;
 }
 .reviews-track {
   display: flex;
+  flex-wrap: nowrap;
   gap: 20px;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
