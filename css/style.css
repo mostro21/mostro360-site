@@ -106,9 +106,13 @@ p { color: #FFFFFF; }
   font-size: 0.95rem;
   font-weight: 500;
   opacity: 0.85;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
 }
 .nav-links a:hover { opacity: 1; color: var(--gold); }
 .nav-dropdown { position: relative; display: flex; align-items: center; }
+.nav-dropdown-toggle { line-height: 1; display: inline-flex; align-items: center; }
 .nav-dropdown-menu {
   display: none;
   position: absolute;
@@ -223,7 +227,7 @@ p { color: #FFFFFF; }
 /* --- Sections --- */
 .section { padding: 120px 24px; }
 .section-dark { background: var(--bg-card); }
-.section-cta { background: linear-gradient(135deg, #0A0A0A 0%, #1a0a00 100%); text-align: center; }
+.section-cta { background: linear-gradient(135deg, #0A0A0A 0%, #1a0a00 100%); text-align: center; padding-top: 60px; }
 .section-label {
   display: inline-block;
   color: #F5C200;
