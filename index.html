@@ -1201,70 +1201,80 @@ document.addEventListener('keydown', function(e) {
 </script>
 <script>
 (function() {
+  var wrap = document.querySelector('.reviews-carousel-wrap');
   var track = document.getElementById('reviewsTrack');
   var prevBtn = document.getElementById('reviewsPrev');
   var nextBtn = document.getElementById('reviewsNext');
   var dotsWrap = document.getElementById('reviewsDots');
-  if (!track) return;
+  if (!track || !wrap) return;
 
-  var cards = track.querySelectorAll('.review-card');
-  var totalCards = cards.length;
+  var cards = Array.prototype.slice.call(
+    track.querySelectorAll('.review-card')
+  );
   var currentIdx = 0;
-  var autoTimer;
+  var autoTimer = null;
 
   function getVisible() {
-    if (window.innerWidth <= 640) return 1;
-    if (window.innerWidth <= 1024) return 2;
+    var w = window.innerWidth;
+    if (w <= 640) return 1;
+    if (w <= 1024) return 2;
     return 3;
   }
 
-  function totalSlides() {
-    return Math.ceil(totalCards / getVisible());
+  function getSlideCount() {
+    return Math.ceil(cards.length / getVisible());
   }
 
-  function buildDots() {
-    dotsWrap.innerHTML = '';
-    var n = totalSlides();
-    for (var i = 0; i < n; i++) {
-      var d = document.createElement('button');
-      d.className = 'reviews-dot' + (i === currentIdx ? ' active' : '');
-      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      (function(idx) {
-        d.addEventListener('click', function() { goTo(idx); });
-      })(i);
-      dotsWrap.appendChild(d);
-    }
+  function getCardWidth() {
+    return cards[0].getBoundingClientRect().width;
   }
 
   function goTo(idx) {
-    var n = totalSlides();
-    currentIdx = (idx + n) % n;
+    var slides = getSlideCount();
+    currentIdx = ((idx % slides) + slides) % slides;
     var visible = getVisible();
-    var cardWidth = cards[0].getBoundingClientRect().width;
+    var cardW = getCardWidth();
     var gap = 20;
-    var offset = currentIdx * visible * (cardWidth + gap);
+    var offset = currentIdx * visible * (cardW + gap);
     track.style.transform = 'translateX(-' + offset + 'px)';
-    buildDots();
+    updateDots();
     resetTimer();
   }
 
-  function resetTimer() {
-    clearInterval(autoTimer);
-    autoTimer = setInterval(function() {
-      goTo(currentIdx + 1);
-    }, 4500);
+  function updateDots() {
+    if (!dotsWrap) return;
+    var slides = getSlideCount();
+    dotsWrap.innerHTML = '';
+    for (var i = 0; i < slides; i++) {
+      var btn = document.createElement('button');
+      btn.className = 'reviews-dot' + (i === currentIdx ? ' active' : '');
+      btn.setAttribute('aria-label', 'Slide ' + (i + 1));
+      (function(n) {
+        btn.addEventListener('click', function() { goTo(n); });
+      })(i);
+      dotsWrap.appendChild(btn);
+    }
   }
 
-  prevBtn.addEventListener('click', function() { goTo(currentIdx - 1); });
-  nextBtn.addEventListener('click', function() { goTo(currentIdx + 1); });
+  function resetTimer() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(function() { goTo(currentIdx + 1); }, 4500);
+  }
 
-  track.addEventListener('mouseenter', function() { clearInterval(autoTimer); });
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(currentIdx - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(currentIdx + 1); });
+
+  track.addEventListener('mouseenter', function() {
+    if (autoTimer) clearInterval(autoTimer);
+  });
   track.addEventListener('mouseleave', function() { resetTimer(); });
 
   window.addEventListener('resize', function() { goTo(0); });
 
-  buildDots();
-  resetTimer();
+  setTimeout(function() {
+    updateDots();
+    resetTimer();
+  }, 100);
 })();
 </script>
 </body>
