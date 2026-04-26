@@ -20,14 +20,14 @@
   --transition: 0.3s ease;
 
   /* Type scale */
-  --text-hero:    clamp(2.8rem, 6vw, 5.5rem);
-  --text-h1:      clamp(2.2rem, 4.5vw, 4rem);
-  --text-h2:      clamp(1.8rem, 3.5vw, 3rem);
-  --text-h3:      clamp(1.3rem, 2.5vw, 1.8rem);
-  --text-body-lg: 1.1rem;
-  --text-body:    1rem;
-  --text-small:   0.85rem;
-  --text-caption: 0.7rem;
+  --text-hero:    clamp(3.2rem, 7vw, 6rem);
+  --text-h1:      clamp(2.6rem, 5vw, 4.5rem);
+  --text-h2:      clamp(2rem, 4vw, 3.5rem);
+  --text-h3:      clamp(1.4rem, 2.8vw, 2rem);
+  --text-body-lg: 1.25rem;
+  --text-body:    1.1rem;
+  --text-small:   0.95rem;
+  --text-caption: 0.75rem;
 
   /* Line heights */
   --lh-display: 0.95;
@@ -292,9 +292,9 @@ p { color: #FFFFFF; }
 }
 .section-sub {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--color-ghost, #E8EAF0);
   max-width: 680px;
   margin-bottom: 48px;
@@ -322,7 +322,7 @@ p { color: #FFFFFF; }
   text-align: left;
   border-bottom: 2px solid var(--border);
 }
-.compare-table td, .pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; color: var(--color-ghost, #E8EAF0); }
+.compare-table td, .pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 400; line-height: 1.55; color: var(--color-ghost, #E8EAF0); }
 .compare-table tr:last-child td, .pricing-table tr:last-child td { border-bottom: none; }
 .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
 .col-highlight { background: rgba(245,168,0,0.06) !important; color: var(--gold) !important; font-weight: 500; }
@@ -355,7 +355,7 @@ p { color: #FFFFFF; }
 .pillar-card:hover::before { opacity: 1; }
 .pillar-number { font-family: var(--font-head); font-size: 3rem; font-weight: 800; color: rgba(245,168,0,0.15); line-height: 1; margin-bottom: 0.5rem; }
 .pillar-card h3 { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; margin-bottom: 1rem; }
-.pillar-card p { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.6; color: var(--color-ghost, #E8EAF0); margin-bottom: 1.5rem; }
+.pillar-card p { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 400; line-height: 1.6; color: var(--color-ghost, #E8EAF0); margin-bottom: 1.5rem; }
 .pillar-card .btn { margin-top: auto; }
 
 /* --- Shield Grid --- */
@@ -404,7 +404,7 @@ p { color: #FFFFFF; }
 .faq-item.open .faq-question::after { content: '\2212'; }
 .faq-answer { display: none; overflow: hidden; }
 .faq-item.open .faq-answer { display: block; }
-.faq-answer p { padding-bottom: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 1.2rem; }
+.faq-answer p { padding-bottom: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.65; font-size: 1.05rem; }
 
 /* --- CTA fine-print disclaimer --- */
 .cta-disclaimer {
@@ -540,11 +540,11 @@ p { color: #FFFFFF; }
 .proof-headline-gold { color: var(--color-gold, #F5C200); }
 .proof-subhead {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 400;
   color: var(--color-ghost, #E8EAF0);
   max-width: 680px;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 48px;
 }
 .proof-grid {
@@ -795,10 +795,10 @@ p { color: #FFFFFF; }
 .about-body { max-width: 640px; }
 .about-body p {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-size: 1.15rem;
   font-weight: 400;
   color: var(--color-ghost, #E8EAF0);
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 20px;
 }
 .about-link {
@@ -943,7 +943,7 @@ p { color: #FFFFFF; }
 }
 .review-text {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: #FFFFFF;
   line-height: 1.6;
@@ -1228,10 +1228,10 @@ p { color: #FFFFFF; }
 
 .pain-card p {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 400;
   color: var(--color-ghost, #E8EAF0);
-  line-height: 1.55;
+  line-height: 1.6;
   margin: 0;
 }
 
