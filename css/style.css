@@ -1175,3 +1175,46 @@ p { color: #FFFFFF; }
     padding: 28px 24px;
   }
 }
+
+/* Pain section two-column layout */
+.pain-cols {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+.pain-col-left {}
+.pain-col-right {
+  position: sticky;
+  top: 120px;
+}
+.pain-side-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #E87D00;
+  box-shadow: 0 0 40px rgba(232,125,0,0.15);
+}
+.pain-side-caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(245,194,0,0.6);
+  text-align: center;
+  margin-top: 10px;
+}
+@media (max-width: 900px) {
+  .pain-cols {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .pain-col-right {
+    position: static;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
