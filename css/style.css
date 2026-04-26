@@ -1124,30 +1124,137 @@ p { color: #FFFFFF; }
   border-radius: 3px;
 }
 
-/* ── Pain Diagnosis CTA bar ── */
+/* ── Pain Section ── */
+.pain-section {
+  background: #0A0A0A;
+  padding: 0;
+}
+
+.pain-cols {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  align-items: start;
+}
+
+.pain-col-left {
+  padding-right: 48px;
+}
+
+.pain-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-amber, #E87D00);
+  margin-bottom: 16px;
+}
+
+.pain-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.pain-card {
+  background: #111318;
+  border: 1px solid #1A0800;
+  padding: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  transition: border-color 0.3s ease;
+}
+
+.pain-card:hover {
+  border-color: var(--color-amber, #E87D00);
+}
+
+.pain-arrow {
+  color: var(--color-amber, #E87D00);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.pain-card p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-ghost, #E8EAF0);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.pain-col-right {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.pain-img-wrap {
+  width: 100%;
+}
+
+.pain-side-img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 1px solid var(--color-amber, #E87D00);
+  box-shadow: 0 0 60px rgba(232,125,0,0.15);
+}
+
+.pain-side-caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(245,194,0,0.5);
+  text-align: center;
+  margin-top: 10px;
+}
+
 .pain-cta-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 24px;
-  background: var(--color-forge, #111318);
-  border: 1px solid var(--color-amber, #E87D00);
-  border-left: 4px solid var(--color-amber, #E87D00);
-  padding: 36px 40px;
-  margin-top: 40px;
+  background: #111318;
+  border-top: 1px solid var(--color-amber, #E87D00);
+  border-bottom: 1px solid var(--color-amber, #E87D00);
+  padding: 32px 40px;
 }
+
 .pain-cta-text {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
   color: #fff;
   letter-spacing: 0.04em;
   line-height: 1;
   margin: 0;
 }
+
 .pain-cta-gold {
   color: var(--color-gold, #F5C200);
 }
+
 .pain-cta-btn {
   display: inline-flex;
   align-items: center;
@@ -1165,10 +1272,28 @@ p { color: #FFFFFF; }
   transition: background 0.2s ease;
   flex-shrink: 0;
 }
+
 .pain-cta-btn:hover {
   background: var(--color-gold, #F5C200);
 }
-@media (max-width: 640px) {
+
+@media (max-width: 1024px) {
+  .pain-cols {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+    gap: 40px;
+  }
+  .pain-col-left {
+    padding-right: 0;
+  }
+  .pain-col-right {
+    position: static;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .pain-side-img {
+    height: 320px;
+  }
   .pain-cta-bar {
     flex-direction: column;
     text-align: center;
@@ -1176,46 +1301,9 @@ p { color: #FFFFFF; }
   }
 }
 
-/* Pain section two-column layout */
-.pain-cols {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 48px;
-  align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 24px;
-}
-.pain-col-left {}
-.pain-col-right {
-  position: sticky;
-  top: 120px;
-}
-.pain-side-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid #E87D00;
-  box-shadow: 0 0 40px rgba(232,125,0,0.15);
-}
-.pain-side-caption {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(245,194,0,0.6);
-  text-align: center;
-  margin-top: 10px;
-}
-@media (max-width: 900px) {
-  .pain-cols {
+@media (max-width: 640px) {
+  .pain-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .pain-col-right {
-    position: static;
-    max-width: 480px;
-    margin: 0 auto;
   }
 }
 
