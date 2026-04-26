@@ -960,3 +960,27 @@ p { color: #FFFFFF; }
   background: var(--color-amber, #E87D00);
   color: #0A0A0A;
 }
+
+/* ── Dennis founder photo ── */
+.dennis-visual { display: flex; justify-content: flex-end; }
+.dennis-img-wrap { width: 100%; max-width: 420px; }
+.dennis-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--color-amber, #E87D00);
+  box-shadow: 0 0 48px rgba(232,125,0,0.12);
+}
+.dennis-img-caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold, #F5C200);
+  text-align: center;
+  margin-top: 12px;
+}
+@media (max-width: 768px) {
+  .dennis-visual { justify-content: center; }
+  .dennis-img-wrap { max-width: 100%; }
+}
