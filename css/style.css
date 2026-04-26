@@ -1233,13 +1233,14 @@ p { color: #FFFFFF; }
 .pain-cta-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 32px;
   background: #111318;
   border-top: 1px solid var(--color-amber, #E87D00);
   border-bottom: 1px solid var(--color-amber, #E87D00);
   padding: 32px 40px;
+  text-align: center;
 }
 
 .pain-cta-text {
