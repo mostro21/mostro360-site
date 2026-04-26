@@ -2,9 +2,6 @@
    MOSTRO 360 — Main Stylesheet
    ============================================ */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
-
 /* --- CSS Variables --- */
 :root {
   --bg: #0A0A0A;
@@ -1348,5 +1345,53 @@ p { color: #FFFFFF; }
     flex-direction: column;
     gap: 12px;
     padding: 20px;
+  }
+}
+
+/* ── Pricing comparison stat bar ── */
+.compare-stat-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid #1A0800;
+  margin-top: 32px;
+  margin-bottom: 20px;
+  background: #111318;
+}
+.compare-stat {
+  flex: 1;
+  text-align: center;
+  padding: 24px 20px;
+}
+.compare-stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  color: var(--color-gold, #F5C200);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.compare-stat-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(232,234,240,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+.compare-stat-divider {
+  width: 1px;
+  height: 60px;
+  background: #1A0800;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .compare-stat-bar {
+    flex-direction: column;
+  }
+  .compare-stat-divider {
+    width: 60px;
+    height: 1px;
   }
 }
