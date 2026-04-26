@@ -360,6 +360,19 @@ p { color: #FFFFFF; }
 .faq-item.open .faq-answer { display: block; }
 .faq-answer p { padding-bottom: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 1.2rem; }
 
+/* --- CTA fine-print disclaimer --- */
+.cta-disclaimer {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(232,234,240,0.4);
+  text-align: center;
+  margin-top: 20px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
 /* --- Scarcity Badge --- */
 .scarcity-badge {
   display: inline-block;
