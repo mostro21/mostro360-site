@@ -27,47 +27,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:description" content="The only purpose-built cybersecurity ecosystem for mortgage brokers. Five pillars. One platform. Zero gaps.">
 <meta property="og:url" content="https://mostro360.com/">
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
-/* Critical font-face declarations — no external request for initial render */
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW5rygbi49c.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/barlowcondensed/v12/HTxwL3I-JCGChYJ8VI-L6OO_au7B497y_3HcuKECcrs.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/barlowcondensed/v12/HTxxL3I-JCGChYJ8VI-L6OO_au7B6mrF_3GcuKECcrs.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Rajdhani';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/rajdhani/v15/LDI2apCSOBg7S-QT7p4JM-sGm0rqPbFqs3k.woff2') format('woff2');
-}
+@font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/bebas-neue.woff2') format('woff2'); }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/barlow-condensed-400.woff2') format('woff2'); }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/barlow-condensed-500.woff2') format('woff2'); }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/barlow-condensed-600.woff2') format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/rajdhani-400.woff2') format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/rajdhani-600.woff2') format('woff2'); }
+@font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/space-mono-400.woff2') format('woff2'); }
 </style>
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
-  media="print"
-  onload="this.media='all'">
-<noscript>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
-</noscript>
 <link rel="stylesheet" href="css/style.css?v=ab0a20b">
 <style>
 :root {
@@ -1100,14 +1068,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="js/main.js?v=ab0a20b" defer></script>
     <script>
-window.addEventListener('load', function() {
-  var s = document.createElement('script');
-  s.src = 'https://beta.leadconnectorhq.com/loader.js';
-  s.async = true;
-  s.setAttribute('data-resources-url', 'https://beta.leadconnectorhq.com/chat-widget/loader.js');
-  s.setAttribute('data-widget-id', '69d5cd753d6e16923651d1ba');
-  document.body.appendChild(s);
-}, {once: true});
+(function() {
+  var loaded = false;
+  function loadGHL() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://beta.leadconnectorhq.com/loader.js';
+    s.async = true;
+    s.setAttribute('data-resources-url', 'https://beta.leadconnectorhq.com/chat-widget/loader.js');
+    s.setAttribute('data-widget-id', '69d5cd753d6e16923651d1ba');
+    document.body.appendChild(s);
+    ['mousedown','mousemove','keydown','scroll','touchstart'].forEach(function(e) {
+      window.removeEventListener(e, loadGHL, {passive:true});
+    });
+  }
+  ['mousedown','mousemove','keydown','scroll','touchstart'].forEach(function(e) {
+    window.addEventListener(e, loadGHL, {once:true, passive:true});
+  });
+  setTimeout(loadGHL, 5000);
+})();
 </script>
 <script>
 document.querySelectorAll('.faq-question').forEach(function(question) {
