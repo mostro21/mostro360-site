@@ -69,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
 </noscript>
-<link rel="stylesheet" href="css/style.css?v=dc4e9c6">
+<link rel="stylesheet" href="css/style.css?v=ab0a20b">
 <style>
 :root {
   --font-display: 'Bebas Neue', sans-serif;
@@ -594,7 +594,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- VIMEO MODAL -->
 <div id="proof-modal" class="proof-modal" role="dialog" aria-modal="true"
-  aria-label="Testimonial video"
+  aria-label="Testimonial video" style="display:none;"
   onclick="if(event.target===this) closeProofModal()">
   <button class="proof-modal-close" onclick="closeProofModal()" aria-label="Close video">&#x00D7;</button>
   <div class="proof-modal-frame">
@@ -1098,7 +1098,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- GHL Chat Widget Embed Goes Here -->
 </div>
 
-<script src="js/main.js?v=dc4e9c6" defer></script>
+<script src="js/main.js?v=ab0a20b" defer></script>
     <script>
 window.addEventListener('load', function() {
   var s = document.createElement('script');
@@ -1237,14 +1237,14 @@ function openProofModal(vimeoId) {
   var iframe = document.getElementById('proof-modal-iframe');
   iframe.src = 'https://player.vimeo.com/video/' + vimeoId +
     '?title=0&byline=0&portrait=0&badge=0&dnt=1&texttrack=en&autoplay=1&color=E87D00';
-  modal.style.display = 'flex';
+  modal.classList.add('is-open');
   document.body.style.overflow = 'hidden';
 }
 function closeProofModal() {
   var modal = document.getElementById('proof-modal');
   var iframe = document.getElementById('proof-modal-iframe');
   iframe.src = '';
-  modal.style.display = 'none';
+  modal.classList.remove('is-open');
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', function(e) {
