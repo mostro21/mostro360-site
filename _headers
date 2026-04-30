@@ -1,2 +1,10 @@
 /proposals/*
   Cache-Control: no-cache, no-store, must-revalidate
+
+/*
+  X-Frame-Options: ALLOWALL
+  Content-Security-Policy: frame-src *;
+
+/contact.html
+  X-Frame-Options: ALLOWALL
+  Content-Security-Policy: frame-src 'self' https://api.mostro360.com https://*.gohighlevel.com https://*.leadconnectorhq.com;
