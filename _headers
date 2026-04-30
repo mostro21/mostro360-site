@@ -3,8 +3,8 @@
 
 /*
   X-Frame-Options: ALLOWALL
-  Content-Security-Policy: frame-src *;
+  Content-Security-Policy: frame-src *
 
 /contact.html
   X-Frame-Options: ALLOWALL
-  Content-Security-Policy: frame-src 'self' https://api.mostro360.com https://*.gohighlevel.com https://*.leadconnectorhq.com;
+  Content-Security-Policy: frame-src 'self' https://api.mostro360.com https://*.gohighlevel.com https://*.leadconnectorhq.com
