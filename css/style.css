@@ -1603,3 +1603,11 @@ p { color: #FFFFFF; }
     padding: 2rem 1rem !important;
   }
 }
+
+/* ── Credibility logo bar: mobile sizing ── */
+@media (max-width: 768px) {
+  .trust-logo-bar img {
+    height: 28px !important;
+    max-height: 28px !important;
+  }
+}
