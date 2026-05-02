@@ -19,7 +19,7 @@ html, body { overflow-x: hidden; max-width: 100%; }
   --border: rgba(255,255,255,0.08);
   --gradient: linear-gradient(90deg, #E03A00, #F5A800, #FFD700);
   --font-head: 'Barlow Condensed', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Barlow Condensed', sans-serif;
   --radius: 8px;
   --transition: 0.3s ease;
 
@@ -29,7 +29,7 @@ html, body { overflow-x: hidden; max-width: 100%; }
   --text-h2:      clamp(2rem, 4vw, 3.5rem);
   --text-h3:      clamp(1.4rem, 2.8vw, 2rem);
   --text-body-lg: 1.25rem;
-  --text-body:    1.1rem;
+  --text-body:    1.125rem;
   --text-small:   0.95rem;
   --text-caption: 0.75rem;
 
@@ -277,12 +277,12 @@ p { color: #FFFFFF; }
 }
 .section-label {
   display: inline-block;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.25em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-amber, #E87D00);
+  color: #F5C200;
   margin-bottom: 12px;
 }
 .section-title {
@@ -296,9 +296,9 @@ p { color: #FFFFFF; }
 }
 .section-sub {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.8;
   color: var(--color-ghost, #E8EAF0);
   max-width: 680px;
   margin-bottom: 48px;
@@ -326,7 +326,7 @@ p { color: #FFFFFF; }
   text-align: left;
   border-bottom: 2px solid var(--border);
 }
-.compare-table td, .pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 400; line-height: 1.55; color: var(--color-ghost, #E8EAF0); }
+.compare-table td, .pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); font-family: 'Barlow Condensed', sans-serif; font-size: 1.125rem; font-weight: 400; line-height: 1.8; color: var(--color-ghost, #E8EAF0); }
 .compare-table tr:last-child td, .pricing-table tr:last-child td { border-bottom: none; }
 .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
 .col-highlight { background: rgba(245,168,0,0.06) !important; color: var(--gold) !important; font-weight: 500; }
@@ -359,7 +359,7 @@ p { color: #FFFFFF; }
 .pillar-card:hover::before { opacity: 1; }
 .pillar-number { font-family: var(--font-head); font-size: 3rem; font-weight: 800; color: rgba(245,168,0,0.15); line-height: 1; margin-bottom: 0.5rem; }
 .pillar-card h3 { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; margin-bottom: 1rem; }
-.pillar-card p { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 400; line-height: 1.6; color: var(--color-ghost, #E8EAF0); margin-bottom: 1.5rem; }
+.pillar-card p { font-family: 'Barlow Condensed', sans-serif; font-size: 1.125rem; font-weight: 400; line-height: 1.8; color: var(--color-ghost, #E8EAF0); margin-bottom: 1.5rem; }
 .pillar-card .btn { margin-top: auto; }
 
 /* --- Shield Grid --- */
@@ -408,7 +408,7 @@ p { color: #FFFFFF; }
 .faq-item.open .faq-question::after { content: '\2212'; }
 .faq-answer { display: none; overflow: hidden; }
 .faq-item.open .faq-answer { display: block; }
-.faq-answer p { padding-bottom: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.65; font-size: 1.05rem; }
+.faq-answer p { padding-bottom: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 1.125rem; }
 
 /* --- CTA fine-print disclaimer --- */
 .cta-disclaimer {
