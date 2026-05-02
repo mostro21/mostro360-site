@@ -1602,6 +1602,36 @@ p { color: #FFFFFF; }
   section {
     padding: 2rem 1rem !important;
   }
+
+  /* Force ALL grid/flex children to respect column bounds —
+     the CSS Grid min-width:auto default is what causes content
+     to overflow 1fr columns even after grid collapses */
+  [style*="grid-template-columns"] > *,
+  .contact-layout-grid > *,
+  .hero-content > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+/* Hero terminal right column: same fix at the 900px breakpoint
+   where hero-two-col collapses (wider than the 768px media query) */
+@media (max-width: 900px) {
+  .hero-content.hero-two-col > div {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  /* Truncate the nowrap title bar text instead of clipping whole widget */
+  .hero-content.hero-two-col > div span[style*="white-space:nowrap"],
+  .hero-content.hero-two-col > div span[style*="white-space: nowrap"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    display: inline-block;
+  }
 }
 
 /* ── Credibility logo bar: mobile sizing ── */
