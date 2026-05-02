@@ -1,3 +1,7 @@
+/* ── Global box-sizing and overflow guard (must be first) ── */
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; max-width: 100%; }
+
 /* ============================================
    MOSTRO 360 — Main Stylesheet
    ============================================ */
@@ -1569,8 +1573,9 @@ p { color: #FFFFFF; }
   box-sizing: border-box;
 }
 #ghl-form iframe {
-  max-width: 100%;
-  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 1100px !important;
 }
 
 /* 3. Contact page two-column layout: stack on mobile */
@@ -1578,5 +1583,23 @@ p { color: #FFFFFF; }
   .contact-layout-grid {
     grid-template-columns: 1fr !important;
     gap: 2rem;
+  }
+}
+
+/* 4. Broad mobile override — catches all inline and class-based grids,
+      forces containers to full width, reduces section padding */
+@media (max-width: 768px) {
+  .grid,
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .container {
+    padding: 1rem !important;
+    width: 100% !important;
+  }
+
+  section {
+    padding: 2rem 1rem !important;
   }
 }
