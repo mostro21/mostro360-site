@@ -7,4 +7,4 @@
 
 /contact.html
   X-Frame-Options: ALLOWALL
-  Content-Security-Policy: frame-src 'self' https://api.mostro360.com https://*.gohighlevel.com https://*.leadconnectorhq.com
+  Content-Security-Policy: frame-src 'self' https://api.mostro360.com https://*.gohighlevel.com https://*.leadconnectorhq.com https://*.msgsndr.com https://link.msgsndr.com
