@@ -30,7 +30,13 @@ if (hamburger && navLinks) {
     if (e.key === 'Escape') closeNav();
   });
   navLinks.querySelectorAll('a:not(.nav-dropdown-toggle)').forEach(link => {
-    link.addEventListener('click', () => closeNav());
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      e.preventDefault();
+      closeNav();
+      setTimeout(() => { window.location.href = href; }, 150);
+    });
   });
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) closeNav();
