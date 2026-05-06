@@ -8,60 +8,77 @@ if (navbar) {
   });
 }
 
-/* Hamburger Menu */
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+/* ── Mobile Nav ── */
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-links');
+const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
 
-function closeNav() {
-  navLinks.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', 'false');
-  document.body.classList.remove('nav-open');
-  document.body.style.overflow = '';
+function openNav() {
+  navMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  hamburger.setAttribute('aria-expanded', 'true');
 }
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', String(open));
-    document.body.classList.toggle('nav-open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+function closeNav() {
+  navMenu.classList.remove('open');
+  document.body.style.overflow = '';
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.querySelectorAll('.nav-dropdown').forEach(function(d) {
+    d.classList.remove('active');
   });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeNav();
-  });
-  navLinks.querySelectorAll('a:not(.nav-dropdown-toggle)').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (!href || href === '#') return;
-      e.preventDefault();
+}
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', function() {
+    if (navMenu.classList.contains('open')) {
       closeNav();
-      setTimeout(() => { window.location.href = href; }, 150);
-    });
+    } else {
+      openNav();
+    }
   });
-  window.addEventListener('resize', () => {
+
+  window.addEventListener('resize', function() {
     if (window.innerWidth > 768) closeNav();
   });
 }
 
-/* Dropdown — click based */
-document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
-  toggle.addEventListener('click', e => {
+/* Dropdown toggle — mobile: expand inline; desktop: float */
+if (dropdownToggle) {
+  dropdownToggle.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    const menu = toggle.nextElementSibling;
-    const isOpen = menu.classList.contains('open');
-    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('open'));
-    if (!isOpen) menu.classList.add('open');
+    this.closest('.nav-dropdown').classList.toggle('active');
+  });
+}
+
+/* Nav link taps — close menu then navigate (fixes iOS fixed-position timing) */
+document.querySelectorAll('.nav-links a:not(.nav-dropdown-toggle)').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    e.preventDefault();
+    closeNav();
+    setTimeout(function() {
+      window.location.href = href;
+    }, 200);
   });
 });
 
-document.addEventListener('click', e => {
+/* Keyboard close */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeNav();
+});
+
+/* Desktop: close dropdown on outside click */
+document.addEventListener('click', function(e) {
   if (!e.target.closest('.nav-dropdown')) {
-    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('open'));
+    document.querySelectorAll('.nav-dropdown').forEach(function(d) {
+      d.classList.remove('active');
+    });
   }
 });
 
-/* FAQ Accordion */
+/* ── FAQ Accordion ── */
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
@@ -77,7 +94,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 });
 
-/* Smooth Scroll */
+/* ── Smooth Scroll ── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -89,7 +106,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* Scroll Animations */
+/* ── Scroll Animations ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
