@@ -15,12 +15,14 @@ const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
 
 function openNav() {
   navMenu.classList.add('open');
+  document.body.classList.add('nav-open');
   document.body.style.overflow = 'hidden';
   hamburger.setAttribute('aria-expanded', 'true');
 }
 
 function closeNav() {
   navMenu.classList.remove('open');
+  document.body.classList.remove('nav-open');
   document.body.style.overflow = '';
   hamburger.setAttribute('aria-expanded', 'false');
   document.querySelectorAll('.nav-dropdown').forEach(function(d) {
