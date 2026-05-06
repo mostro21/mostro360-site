@@ -1737,10 +1737,28 @@ p { color: #FFFFFF; }
     padding: 0 16px !important;
   }
 
-  .hero, [class*="hero"] {
+  /* Scope to the hero SECTION only — [class*="hero"] was too broad
+     and matched .hero-eyebrow, overriding overflow:visible above */
+  .hero {
     overflow: hidden !important;
     max-width: 100vw !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
+}
+
+/* ── Eyebrow visibility — explicit override for iOS render issues ── */
+.hero-eyebrow,
+.section-label,
+[class*="eyebrow"],
+[class*="apex"],
+[class*="florida"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
